@@ -19,14 +19,13 @@ $(document).ready(function(){
     client_id: '59a99891c97851fe05153a2c4afeff7f'
   });
 
-// find all sounds of buskers licensed under 'creative commons share alike'
-SC.get('/tracks', {
-  q: 'buskers', 
-  license: 'cc-by-sa'
-})
-  .then(function(tracks) {
-    console.log(tracks);
+  // find all sounds of buskers licensed under 'creative commons share alike'
+  SC.get('/tracks', {
+    q: 'buskers'
+  })
+    .then(function(tracks) {
+      console.log(tracks);
+    });
   });
-});
 
 })(jQuery);
